@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Site from "../components/Site.astro";
+
+---
+
+<Layout title="Home">
+  <h1 class="font-semibold text-6xl dark:text-mauve-200">hello</h1>
+
+  <div class="flex flex-col gap-2 bg-mauve-50 p-2 rounded-2xl border border-mauve-200 dark:bg-mauve-950 dark:border-mauve-800">
+    <Site title="image-to-zpl" repository="hiimnit/image-to-zpl" link="https://image-to-zpl.filipsoukup.dev">
+      convert images to zpl. with a preview. locally.
+    </Site>
+
+    <Site title="year" repository="hiimnit/year" link="https://year.filipsoukup.dev">
+      simple visualisation of the current year. one dot for each day and a counter.
+    </Site>
+
+    <Site title="bc-license-cmp" repository="hiimnit/bc-license-checker-site" link="https://bc-license-diff.filipsoukup.dev">
+      compare a business central license file with a list of objects. see what is missing. export.
+    </Site>
+
+    <Site title="ip-watcher" repository="hiimnit/azure-ip-watcher" link="https://azure-ip-watcher.vercel.app">
+      track ips used by business central.
+    </Site>
+
+    <Site title="mocean" repository="hiimnit/mocean" link="https://mocean.filipsoukup.dev">
+      LOADING.
+    </Site>
+  </div>
+</Layout>

@@ -1,0 +1,24 @@
+---
+import GithubLogo from '../assets/github.svg';
+
+interface Props {
+  title: string;
+  repository: string;
+  link: string;
+}
+
+const {
+  title,
+  repository,
+  link,
+} = Astro.props;
+---
+<div class="border rounded-xl px-3 py-3 border-mauve-50 bg-mauve-100 hover:border-red-400 hover:bg-mauve-200 transition-colors dark:border-mauve-950 dark:bg-mauve-900 dark:hover:bg-mauve-800">
+  <h2 class="text-lg font-medium tracking-wide"><a href={link} class="underline decoration-2 decoration-red-700 hover:decoration-1 hover:underline-offset-2 dark:decoration-red-300">{title}</a></h2>
+  <div class="text-mauve-600 text-base dark:text-mauve-300">
+    <slot />
+  </div>
+
+  <a href={"https://github.com/" + repository} class="flex flex-row gap-1 items-center text-mauve-800 underline decoration-2 decoration-red-700 hover:decoration-1 hover:underline-offset-2 dark:text-mauve-400 dark:decoration-red-300">    <GithubLogo height={14} width={14} class="fill-black dark:fill-white"/> {repository}</a>
+</div>
+
